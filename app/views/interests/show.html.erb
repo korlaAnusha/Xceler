@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Topic:</strong>
+  <%if @interest.topic == "Other" %>
+    <td><%= @interest.other_topic %></td>
+  <%else%>
+    <td><%= @interest.topic %></td>
+  <%end%>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @interest.description %>
+</p>
+
+<%= link_to 'Edit', edit_interest_path(@interest) %> |
+<%= link_to 'Back', interests_path %>

@@ -14,3 +14,11 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+$(document).ready(function(){
+  $('.text-topic').hide();
+  $('#interest_topic').change(function() {
+    if(this.value == "Other") {    
+      $('.text-topic').show();
+    }
+  });
+});
